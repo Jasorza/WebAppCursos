@@ -35,5 +35,14 @@ namespace WebAppCursos.Recourses
                 Description = "Se requiere al menos un caracter especial"
             };
         }
+
+        public override IdentityError InvalidEmail(string email)
+        {
+            return new IdentityError
+            {
+                Code = nameof(InvalidEmail),
+                Description = "El correo no es valido"
+            };
+        }
     }
 }

@@ -40,7 +40,8 @@ namespace WebAppCursos.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
-            [EmailAddress]
+            [StringLength(100, ErrorMessage = "HOlu")]
+            [DataType(DataType.EmailAddress)]
             [Display(Name = "Email")]
             public string Email { get; set; }
 
